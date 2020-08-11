@@ -32,6 +32,9 @@
     display: inline-block;
     padding: 25px;
     border: 1px solid #666;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .date{
@@ -40,12 +43,27 @@
     padding-right: 50px;
     padding-bottom: 30px;
     padding-top: 30px;
-    /* border: 1px solid #666; */
+    margin-left: 0.5;
+}
+
+.date:hover{
+    border-radius: 100px;
+    background-color: lightblue;
 }
 
 .firstSeven{
     position: relative;
     width: 100%;
-    
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
+
+.twentynineThirtyOne{
+    float: left;
+    margin-left: 21.5%;
+}
+
+.eightFifteen{
+    margin-left: 1%;
+}

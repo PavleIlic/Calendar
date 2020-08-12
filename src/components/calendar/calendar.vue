@@ -8,6 +8,18 @@
 
 export default {
   name: 'calendar',
+
+  data(){
+    return {
+      name: 'Pavle',
+      thisMonth: '',
+    }
+  },
+  created: function currentMonth() {
+    var d = new Date();
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      this.thisMonth = (document.getElementsByClassName("month").innerHTML = months[d.getMonth()]);
+  }
 }
 </script>
 

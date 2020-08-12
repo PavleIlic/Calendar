@@ -14,7 +14,7 @@
     margin-top: 20px;
 }
 
-.title {
+.month {
     color: #fff;
     background-color: #bfbeba;
     width: 15%;
@@ -23,10 +23,48 @@
     border-radius: 10px;
 }
 
+.dates{
+    list-style-type: none;
+}
+
 .monday {
     display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .tuesday{
     display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.wednesday{
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.thursday {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.friday {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.saturday{
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.sunday{
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
 }

@@ -3,47 +3,61 @@
 
     <div class="calendar">
         <p class="month">{{ thisMonth }}</p>
-        <div class="mini-wrap">
+        <div class="mini-wrap" >
             <div class="monday">
                 <h4>Monday</h4>
                 <ul class="dates">
-                    <li></li>
+                    <li v-for="day in monday" :key="day">
+                        {{ day }}
+                    </li>
                 </ul>
             </div>
             <div class="tuesday">
                 <h4>Tuesday</h4>
                 <ul class="dates">
-                    <li></li>
+                    <li v-for="day in tuesday" :key="day">
+                        {{ day }}
+                    </li>
                 </ul>
             </div>
             <div class="wednesday">
                 <h4>Wednesday</h4>
                 <ul class="dates">
-                    <li>{{ this.activeDay }}</li>
+                    <li v-for="day in wednesday" :key="day">
+                        {{ day }}
+                    </li>
                 </ul>
             </div>
             <div class="thursday">
                 <h4>Thursday</h4>
                 <ul class="dates">
-                    <li></li>
+                    <li v-for="day in thursday" :key="day">
+                        {{ day }}
+                    </li>
                 </ul>
             </div>
             <div class="friday">
                 <h4>Friday</h4>
                 <ul class="dates">
-                    <li></li>
+                    <li v-for="day in friday" :key="day">
+                    {{ day }}
+                    </li>
                 </ul>
             </div>
             <div class="saturday">
                 <h4>Saturday</h4>
                 <ul class="dates">
-                    <li></li>
+                    <li v-for="day in saturday" :key="day">
+                        {{ day }}
+                    </li>
                 </ul>
             </div>
             <div class="sunday">
                 <h4>Sunday</h4>
                 <ul class="dates">
-                    <li></li>
+                    <li v-for="day in sunday" :key="day">
+                        {{ day }}
+                    </li>
                 </ul>
             </div>
         </div>

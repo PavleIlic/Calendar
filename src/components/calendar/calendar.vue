@@ -13,50 +13,65 @@ export default {
     return {
       name: 'Pavle',
       thisMonth: '',
-      // thisDay: '',
       activeDay: '',
+      monday: [],
+      tuesday: [],
+      wednesday: [],
+      thursday: [],
+      friday: [],
+      saturday: [],
+      sunday: [],
+      days: ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     }
   },
   created(){
     this.currentMonth();
-    this.currentDay();
+    this.catchAllDays();
   },
   methods: {
     currentMonth() {
             var d = new Date();
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             this.thisMonth = (document.getElementsByClassName("month").innerHTML = months[d.getMonth()]);
+    },
+    currentDay(n, day) {
+            switch (n) {
+              case "Sunday": 
+                this.sunday.push(day);
+                break;
+              case "Monday":
+                this.monday.push(day);
+                break;
+              case "Tuesday":
+                this.tuesday.push(day);
+                break;
+              case "Wednesday":
+                  this.wednesday.push(day);
+                break;
+              case "Thursday":
+                this.thursday.push(day);
+                break;
+              case "Friday":
+                this.friday.push(day);
+                break;
+              case  "Saturday":
+                this.saturday.push(day);
+                break;
+            }
           },
-    currentDay() {
-            // var d = new Date();
-            // this.thisDay = d.getDay();
-            // console.log(this.thisDay);
-            switch (new Date().getDay()) {
-            case 0:
-              this.activeDay = "Sunday";
-              break;
-            case 1:
-              this.activeDay = "Monday";
-              break;
-            case 2:
-              this.activeDay = "Tuesday";
-              break;
-            case 3:
-              this.activeDay = "Wednesday";
-              break;
-            case 4:
-              this.activeDay = "Thursday";
-              break;
-            case 5:
-              this.activeDay = "Friday";
-              break;
-            case  6:
-              this.activeDay = "Saturday";
-          }
+          catchDaysInMonth(day) {
+            var d = new Date('2020-08-' + day);
+            var n = this.days[d.getDay() ];
+            this.currentDay(n, day);
+          },
+          catchAllDays() {
+            for(let i = 0; i <= 31; i++){
+              this.catchDaysInMonth(i);
+            }
           },
   }
           
-  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
